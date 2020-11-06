@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busqueda.cancelaciones.vistas.Vista_De_AplicacionController">
+   
+    <children>
+        <AnchorPane fx:id="anchorId" maxHeight="400" maxWidth="600" prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <DatePicker fx:id="datePicker" layoutX="250.0" layoutY="244.0" onAction="#funcion_onAction_datePicker" prefHeight="36.0" prefWidth="120.0" promptText="DD/MM/YYYY" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="244.0" />
+                <Button fx:id="id_btn_cancelaciones" layoutX="210.0" layoutY="291.0" mnemonicParsing="false" onAction="#buscarCancelaciones" prefHeight="36.0" prefWidth="180.0" text="BUSCAR CANCELACIONES" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="291.0">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Text layoutX="102.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al apretar el botón de &quot;BUSCAR CANCELACIONES&quot; mostrará como resultado los SYSOUT en NOTOK,OK Y OK con errores del rango de fechas seleccionado." wrappingWidth="416.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="82.0" AnchorPane.topAnchor="340.0" />
+                <Label layoutX="64.0" layoutY="244.0" prefHeight="36.0" prefWidth="120.0" text="Elija rango de fecha:" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="416.0" AnchorPane.topAnchor="244.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="id_radiobtn_2" layoutX="34.0" layoutY="227.0" mnemonicParsing="false" onAction="#funcion_radiobtn_2" prefHeight="17.0" prefWidth="134.0" text="Habilitar Sección 2" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="432.0" AnchorPane.topAnchor="227.0" />
+                <RadioButton fx:id="id_radiobtn_1" contentDisplay="CENTER" layoutX="34.0" layoutY="29.0" mnemonicParsing="false" onAction="#funcion_radiobtn_1" prefHeight="17.0" prefWidth="134.0" text="Habilitar Sección 1" AnchorPane.bottomAnchor="354.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="432.0" AnchorPane.topAnchor="29.0" />
+                <Label layoutX="79.0" layoutY="56.0" prefHeight="36.0" prefWidth="89.0" text="Elegir destino: " AnchorPane.bottomAnchor="308.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="432.0" AnchorPane.topAnchor="56.0" />
+                <Label layoutX="101.0" layoutY="151.0" prefHeight="17.0" prefWidth="150.0" text="Escribir filtro de búsqueda:" AnchorPane.bottomAnchor="232.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="349.0" AnchorPane.topAnchor="151.0" />
+                <TextField fx:id="id_filtro_caracteres" layoutX="278.0" layoutY="147.0" onKeyReleased="#keyReleaseProperty" prefHeight="25.0" prefWidth="239.0" promptText="Texto a buscar" AnchorPane.bottomAnchor="228.0" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="147.0" />
+                <Label layoutX="278.0" layoutY="111.0" prefHeight="17.0" prefWidth="281.0" text="(Al habilitarlo la mayúscula o minúscula serán filtros)" AnchorPane.bottomAnchor="272.0" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="111.0" />
+                <Button fx:id="browse_btn" layoutX="278.0" layoutY="58.0" mnemonicParsing="false" onAction="#browse_function" prefHeight="33.0" prefWidth="72.0" text="BROWSE" AnchorPane.bottomAnchor="309.0" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="58.0" />
+            <TextField fx:id="id_browse_text_direccion" layoutX="368.0" layoutY="58.0" onKeyReleased="#key_release_browse" prefHeight="33.0" prefWidth="200.0" promptText="C:\" AnchorPane.bottomAnchor="309.0" AnchorPane.leftAnchor="368.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="58.0" />
+            <Button fx:id="id_btn_buscar_archivos" layoutX="278.0" layoutY="184.0" mnemonicParsing="false" onAction="#funcion_buscar_archivos" prefHeight="33.0" prefWidth="128.0" text="BUSCAR ARCHIVOS" AnchorPane.bottomAnchor="183.0" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="194.0" AnchorPane.topAnchor="184.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="id_checkBox_caseSensitive" layoutX="101.0" layoutY="111.0" mnemonicParsing="false" onAction="#habilitar_caseSensitive" prefHeight="17.0" prefWidth="150.0" text="Habilitar filtro sensitivo" />
+            <DatePicker fx:id="datePicker_2" layoutX="430.0" layoutY="244.0" onAction="#funcion_onAction_datePicker_2" prefHeight="36.0" prefWidth="120.0" promptText="DD/MM/YYYY" />
+            <Label layoutX="202.0" layoutY="244.0" prefHeight="36.0" prefWidth="48.0" text="Desde:" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="382.0" layoutY="244.0" prefHeight="36.0" prefWidth="48.0" text="Hasta:" textFill="#eb0d0d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

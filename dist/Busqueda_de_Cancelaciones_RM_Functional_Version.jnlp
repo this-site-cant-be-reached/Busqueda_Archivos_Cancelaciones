@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Busqueda_de_Cancelaciones_RM_Functional_Version.jnlp">
+  <information>
+    <title>Busqueda_de_Cancelaciones_RM_Functional_Version</title>
+    <vendor>Compumar</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Busqueda_de_Cancelaciones_RM_Functional_Version" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="busqueda.cancelaciones.Main"  name="Busqueda_de_Cancelaciones_RM_Functional_Version" />
+  <update check="always"/>
+</jnlp>
